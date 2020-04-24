@@ -5,7 +5,8 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var come_messagesRouter = require('./routes/come_messages');
+var go_messagesRouter = require('./routes/go_messages');
 
 var app = express();
 
@@ -19,8 +20,21 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+//メソッドオーバーライドの設定
+var methodOverride = require('method-override');
+app.use(methodOverride(function (req, res) {
+  if (req.body && typeof req.body === 'object' && '_method' in req.body) {
+    // look in urlencoded POST bodies and delete it
+    var method = req.body._method
+    delete req.body._method
+    return method
+  }
+}));
+
+//こっから
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/come', come_messagesRouter);
+app.use('/go', go_messagesRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

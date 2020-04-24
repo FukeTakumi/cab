@@ -1,9 +1,16 @@
 var express = require('express');
 var router = express.Router();
+const db = require('../models/index');
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+router.get('/',(req, res)=>{
+  const filter ={
+    include:[{
+      model:db.go_message
+    }]
+  };
+  db.come_message.findAll(filter).then((results)=>{
+    res.render('index.ejs');
+  });
 });
 
 module.exports = router;

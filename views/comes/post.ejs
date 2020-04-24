@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="js">
+<head>
+    <meta charset="UTF-8">
+    <title>cab</title>
+</head>
+<body>
+    <p>きてほしい</p>
+    <form action="/come/create" method="POST">
+        <input type="text" value="GDPカンスト" name="island_name">
+        <p>島の</p>
+        <input type="text" value="まじょがり" name="name">
+        <p>です</p>
+        <p>フルーツ</p>
+        <select name="fruit">
+            <option value="">選択してください</option>
+            <option value="リンゴ">リンゴ</option>
+            <option value="オレンジ">オレンジ</option>
+            <option value="ナシ">ナシ</option>
+            <option value="さくらんぼ">さくらんぼ</option>
+            <option value="モモ">モモ</option>
+        </select>
+        <p>カブの</p>
+        <select name="cab_status">
+            <option value="">選択してください</option>
+            <option value="売り値">売り値</option>
+            <option value="買い値">買い値</option>
+        </select>
+        <input type="number" value=123 name="cab_bell">
+        <p>ベル</p>
+        <p>ほしい！</p>
+        <input type="text" value="hogehoge" name="want">
+        <p>島パスワード</p>
+        <input type="text" value="hogehoge" name="pass">
+        <input type="submit" value="投稿する">
+    </form>
+</body>
+</html>

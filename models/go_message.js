@@ -4,8 +4,10 @@ module.exports = (sequelize, DataTypes) => {
     name: DataTypes.STRING,
     island_name: DataTypes.STRING,
     memo: DataTypes.STRING,
-    goto_id: DataTypes.STRING
-  }, {});
+    come_message_id: DataTypes.STRING
+  }, {
+    underscored: true,
+  });
   go_message.associate = function(models) {
     go_message.belongsTo(models.come_message);
   };

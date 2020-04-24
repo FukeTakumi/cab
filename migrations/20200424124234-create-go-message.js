@@ -1,7 +1,7 @@
 'use strict';
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('come_messages', {
+    return queryInterface.createTable('go_messages', {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -16,32 +16,20 @@ module.exports = {
         allowNull: false,
         type: Sequelize.STRING
       },
-      cab_status: {
-        allowNull: false,
+      memo: {
         type: Sequelize.STRING
       },
-      cab_bell: {
-        allowNull: false,
-        type: Sequelize.INTEGER
-      },
-      want: {
-        type: Sequelize.STRING
-      },
-      pass: {
-        allowNull: false,
-        type: Sequelize.STRING
-      },
-      createdAt: {
+      created_at: {
         allowNull: false,
         type: Sequelize.DATE
       },
-      updatedAt: {
+      updated_at: {
         allowNull: false,
         type: Sequelize.DATE
       }
     });
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('come_messages');
+    return queryInterface.dropTable('go_messages');
   }
 };

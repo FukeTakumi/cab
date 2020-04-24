@@ -2,7 +2,7 @@
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.addColumn('go_messages','goto_id', {
+    return queryInterface.addColumn('go_messages','come_message_id', {
       allowNull:false,
       type:Sequelize.INTEGER,
       references:{
@@ -15,6 +15,6 @@ module.exports = {
   },
 
   down: (queryInterface, Sequelize) => {
-    return queryInterface.removeColumn('go_messages','goto_id');
+    return queryInterface.removeColumn('go_messages','come_message_id');
   }
 };
