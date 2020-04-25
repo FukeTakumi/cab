@@ -17,7 +17,8 @@
       <p><%=come_message.cab_bell%></p>
       <p><%=come_message.want%></p>
       <p><%=come_message.pass%></p>
-      <p><%=come_message.createdAt%>+9時間まで</p>
+      <p class="postdate"><%=come_message.postdate%></p>
+      <p>まで</p>
       <form action="/come/delete/<%=come_message.id%>" method="POST">
         <input type="hidden" name="_method" value="delete">
         <input type="submit" value="削除">
@@ -38,5 +39,6 @@
       </form>
       <br>
     <%})%>
+    <script src="/javascripts/time.js"></script>
   </body>
 </html>

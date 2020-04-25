@@ -2,10 +2,12 @@ var express = require('express');
 var router = express.Router();
 const db = require('../models/index');
 
+//いきたい入力画面表示
 router.get('/create/:id',(req, res)=>{
     res.render('gos/post.ejs', {id:req.params.id});
 });
 
+//いきたい新規作成
 router.post('/create/:id',(req, res)=>{
     const params = {
         island_name:req.body.island_name,
@@ -18,6 +20,7 @@ router.post('/create/:id',(req, res)=>{
     });
 });
 
+//行きたい削除
 router.delete('/delete/:id',(req, res)=>{
     const filter = {
         where:{

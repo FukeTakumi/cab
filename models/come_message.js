@@ -7,7 +7,8 @@ module.exports = (sequelize, DataTypes) => {
     cab_status: DataTypes.STRING,
     cab_bell: DataTypes.INTEGER,
     want: DataTypes.STRING,
-    pass: DataTypes.STRING
+    pass: DataTypes.STRING,
+    postdate:DataTypes.STRING
   }, {
     underscored: true,
   });

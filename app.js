@@ -33,10 +33,44 @@ app.use(methodOverride(function (req, res) {
 
 //こっから
 const db = require('./models/index');
-db.come_message.findAll().then((results)=>{
-  for(let i = 0;i < results.length; i++){
+
+////時間制限で削除する処理////
+date = new Date();
+
+//残り時間を計算する関数
+function passing_time(hours,minutes){
+  let passing_hours = mod(date.getHours() - hours,24);
+  if(date.getMinutes() - minutes  < 0){
+    passing_hours -= 1;
+  }
+  if(passing_hours >= 1){
+    return true
+  } else {
+    return false
+  }
+}
+
+//剰余を常に正にする関数
+function mod(i, j) {
+  return (i % j) < 0 ? (i % j) + 0 + (j < 0 ? -j : j) : (i % j + 0);
+}
+
+//削除を行う処理
+db.come_message.findAll().then((come_messages)=>{
+  for(let i = 0;i < come_messages.length; i++){
+    const hours = Number(come_messages[i].postdate.split(':')[0]);
+    const minutes = Number(come_messages[i].postdate.split(':')[1]);
+    if(passing_time(hours,minutes)){
+      const filter = {
+        where:{
+          id:come_messages[i].id
+        }
+      };
+      db.come_message.destroy(filter);
+    }
   }
 });
+////時間制限で削除する処理////
 
 
 app.use('/', indexRouter);

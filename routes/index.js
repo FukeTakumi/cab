@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 const db = require('../models/index');
 
+//一覧表示
 router.get('/',(req, res)=>{
   const filter ={
     include:[{
