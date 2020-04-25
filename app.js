@@ -67,6 +67,7 @@ db.come_message.findAll().then((come_messages)=>{
         }
       };
       db.come_message.destroy(filter);
+      
     }
   }
 });

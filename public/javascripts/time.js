@@ -7,5 +7,9 @@ for(let i = 0;i < times.length;i++){
     let hours = Number(time.split(':')[0]);
     let minutes = Number(time.split(':')[1]);
     let limit_hours = (hours + 1)%24;
-    times[i].innerHTML = `${limit_hours}:${minutes}`;
+    if (minutes < 10){
+        times[i].innerHTML = `${limit_hours}:0${minutes}`;
+    }else{
+        times[i].innerHTML = `${limit_hours}:${minutes}`;
+    }
 }
