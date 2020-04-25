@@ -32,6 +32,13 @@ app.use(methodOverride(function (req, res) {
 }));
 
 //こっから
+const db = require('./models/index');
+db.come_message.findAll().then((results)=>{
+  for(let i = 0;i < results.length; i++){
+  }
+});
+
+
 app.use('/', indexRouter);
 app.use('/come', come_messagesRouter);
 app.use('/go', go_messagesRouter);

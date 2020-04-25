@@ -9,7 +9,7 @@ router.get('/',(req, res)=>{
     }]
   };
   db.come_message.findAll(filter).then((results)=>{
-    res.render('index.ejs');
+    res.render('index.ejs',{come_messages:results});
   });
 });
 

@@ -8,5 +8,35 @@
     <form action="/come/create" method="GET">
       <button type="submit">投稿する！</button>
     </form>
+    <%come_messages.map((come_message)=>{%>
+      <h1>きてほしい</h1>
+      <p><%=come_message.island_name%></p>
+      <p><%=come_message.name%></p>
+      <p><%=come_message.fruit%></p>
+      <p><%=come_message.cab_status%></p>
+      <p><%=come_message.cab_bell%></p>
+      <p><%=come_message.want%></p>
+      <p><%=come_message.pass%></p>
+      <p><%=come_message.createdAt%>+9時間まで</p>
+      <form action="/come/delete/<%=come_message.id%>" method="POST">
+        <input type="hidden" name="_method" value="delete">
+        <input type="submit" value="削除">
+      </form>
+      <h1>いきたい</h1>
+      <%come_message.go_messages.map((go_message)=>{%>
+        <p><%=go_message.island_name%></p>
+        <p><%=go_message.name%></p>
+        <p><%=go_message.memo%></p>
+        <form action="/go/delete/<%=go_message.id%>" method="POST">
+          <input type="hidden" name="_method" value="delete">
+          <input type="submit" value="削除">
+        </form>
+        <br>
+      <%})%>
+      <form action="/go/create/<%=come_message.id%>" method="GET">
+        <button type="submit">いきたい</button>
+      </form>
+      <br>
+    <%})%>
   </body>
 </html>
