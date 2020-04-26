@@ -20,10 +20,51 @@ router.post('/create',(req, res)=>{
         pass:req.body.pass,
         postdate:`${date.getHours()}:${date.getMinutes()}`
     };
-    db.come_message.create(params).then((results)=>{
-        res.redirect('/');
-    });
+    if(validate(req.body)){
+        db.come_message.create(params).then((results)=>{
+            console.log('クリア');
+            res.redirect('/');
+        });
+    }else{
+        res.redirect('/come/create');
+    };
 });
+
+function validate(come_message){
+    if(come_message.island_name.length > 10 || come_message.island_name === ""){
+        console.log('島の名前が無効です')
+        console.log(come_message.island_name.length);
+        return false;
+    }
+    if(come_message.name.length > 10 || come_message.name === ""){
+        console.log('名前が無効です')
+        return false;
+    }
+    if(come_message.fruit === ""){
+        console.log('果実が無効です')
+        return false;
+    }
+    if(come_message.cab_status === ""){
+        console.log('株の状態が無効です')
+        return false;
+    }
+    if(come_message.cab_bell <= 70 || come_message.cab_bell >= 700){
+        console.log('株価が無効です');
+        return false;
+    };
+    if(come_message.want.length > 20){
+        console.log('ほしい！は20文字以内です');
+        return false;
+    };
+    if(come_message.pass.length !== 5){
+        console.log(come_message.pass.length);
+        console.log('パスワードが無効です');
+        return false;
+    }else{
+        return true;
+    }
+}
+
 
 //きてほしい削除
 router.delete('/delete/:id',(req, res)=>{

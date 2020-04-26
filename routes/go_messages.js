@@ -15,10 +15,32 @@ router.post('/create/:id',(req, res)=>{
         memo:req.body.memo,
         come_message_id:req.params.id
     };
-    db.go_message.create(params).then((results)=>{
-        res.redirect('/');
-    });
+    if(validate(req.body)){
+        db.go_message.create(params).then((results)=>{
+            res.redirect('/');
+        });
+    }else{
+        res.redirect(`/go/create/${req.params.id}`);
+    };
 });
+
+function validate(go_message){
+    if(go_message.island_name.length > 10 || go_message.island_name === ""){
+        console.log('島の名前が無効です')
+        console.log(go_message.island_name.length);
+        return false;
+    }
+    if(go_message.name.length > 10 || go_message.name === ""){
+        console.log('名前が無効です')
+        return false;
+    }
+    if(go_message.memo.length > 20){
+        console.log('メモは20文字以内です');
+        return false;
+    }else{
+        return true;
+    }
+}
 
 //行きたい削除
 router.delete('/delete/:id',(req, res)=>{

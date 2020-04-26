@@ -6,14 +6,14 @@
 </head>
 <body>
     <p>きてほしい</p>
-    <form action="/come/create" method="POST">
+    <form action="/come/create" method="POST" id="come_form">
         <input type="text" value="GDPカンスト" name="island_name">
         <p>島の</p>
         <input type="text" value="まじょがり" name="name">
         <p>です</p>
         <p>フルーツ</p>
         <select name="fruit">
-            <option value="">選択してください</option>
+            <option value=""></option>
             <option value="リンゴ">リンゴ</option>
             <option value="オレンジ">オレンジ</option>
             <option value="ナシ">ナシ</option>
@@ -22,7 +22,7 @@
         </select>
         <p>カブの</p>
         <select name="cab_status">
-            <option value="">選択してください</option>
+            <option value=""></option>
             <option value="売り値">売り値</option>
             <option value="買い値">買い値</option>
         </select>
@@ -32,7 +32,8 @@
         <input type="text" value="hogehoge" name="want">
         <p>島パスワード</p>
         <input type="text" value="hogehoge" name="pass">
-        <input type="submit" value="投稿する">
+        <button type="submit">おくる！</button>
     </form>
+    <script src="/javascripts/validation.js"></script>
 </body>
 </html>
