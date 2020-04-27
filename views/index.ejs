@@ -2,29 +2,49 @@
 <html>
   <head>
     <title>cab</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/pc_style.css' />
+    <link rel="stylesheet" href="pc_style.css" type="text/css">
   </head>
   <body>
-    <form action="/come/create" method="GET">
-      <button type="submit">投稿する！</button>
-    </form>
-    <%come_messages.map((come_message)=>{%>
-      <h1>きてほしい</h1>
-      <p><%=come_message.island_name%></p>
-      <p><%=come_message.name%></p>
-      <p><%=come_message.fruit%></p>
-      <p><%=come_message.cab_status%></p>
-      <p><%=come_message.cab_bell%></p>
-      <p><%=come_message.want%></p>
-      <p><%=come_message.pass%></p>
-      <p class="postdate"><%=come_message.postdate%></p>
-      <p>まで</p>
-      <form action="/come/delete/<%=come_message.id%>" method="POST">
+    <div class="main_wrapper">
+      <div class="index_top">
+        <h1 class="index_title">現在の募集</h1>
+        <form action="/come/create" method="GET">
+          <button type="submit" class="come_message_button">きてほしい！</button>
+        </form>
+      </div>
+      <%come_messages.map((come_message)=>{%>
+      <div class="come_message">
+        <div class="come_message_all">
+          <div class="come_message_left">
+            <p class="come_island_name"><%=come_message.island_name%>島</p>
+            <p class="come_name"><%=come_message.name%></p>
+            <!-- <p><come_message.fruit></p> -->
+            <p class="pass_is">島パスワード</p>
+            <p class="pass"><%=come_message.pass%></p>
+            <p class="postdate_is">しめきり</p>
+            <p class="postdate"><%=come_message.postdate%></p><span class="made">まで</span>
+          </div>
+
+          <div class="come_message_right">
+            <p class="cab_status">カブの<span class="be_red"><%=come_message.cab_status%></span></p>
+            <p class="cab_bell"><%=come_message.cab_bell%><span class="bell">ベル</span></p>
+            <p class="want_is">ほしい！</p>
+            <p class="want_dummy"></p>
+            <p class="want"><%=come_message.want%></p>
+          </div>
+        </div>
+        <form action="/go/create/<%=come_message.id%>" method="GET" class="go_message_button_wrap">
+          <button type="submit" class="go_message_button">いきたい！</button>
+        </form>
+      </div>
+      <!-- <form action="/come/delete/<=come_message.id>" method="POST">
         <input type="hidden" name="_method" value="delete">
         <input type="submit" value="削除">
-      </form>
-      <h1>いきたい</h1>
-      <%come_message.go_messages.map((go_message)=>{%>
+      </form> -->
+
+      <div class="go_message">
+    <%come_message.go_messages.map((go_message)=>{%>
         <p><%=go_message.island_name%></p>
         <p><%=go_message.name%></p>
         <p><%=go_message.memo%></p>
@@ -33,12 +53,12 @@
           <input type="submit" value="削除">
         </form>
         <br>
-      <%})%>
-      <form action="/go/create/<%=come_message.id%>" method="GET">
-        <button type="submit">いきたい</button>
-      </form>
-      <br>
+        <br>
     <%})%>
+      </div>
+    <%})%>
+    </div>
+    
     <script src="/javascripts/time.js"></script>
   </body>
 </html>

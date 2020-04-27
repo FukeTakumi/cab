@@ -52,8 +52,8 @@ function validate(come_message){
         console.log('株価が無効です');
         return false;
     };
-    if(come_message.want.length > 20){
-        console.log('ほしい！は20文字以内です');
+    if(come_message.want.length > 30){
+        console.log('ほしい！は30文字以内です');
         return false;
     };
     if(come_message.pass.length !== 5){

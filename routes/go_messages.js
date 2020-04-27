@@ -34,8 +34,8 @@ function validate(go_message){
         console.log('名前が無効です')
         return false;
     }
-    if(go_message.memo.length > 20){
-        console.log('メモは20文字以内です');
+    if(go_message.memo.length > 30){
+        console.log('メモは30文字以内です');
         return false;
     }else{
         return true;
