@@ -16,22 +16,25 @@ p{
     margin: 0 auto;
     width: 80%;
     background-color: #fff8e5;
+    padding-bottom: 50px;
   }
 }
 
-/* 961~1114 */
-@media screen and (max-width:1114px) and (min-width:701px) {
+/* 881~1114 */
+@media screen and (max-width:1114px) and (min-width:881px) {
   .main_wrapper{
     margin: 0 auto;
     background-color: #fff8e5;
+    padding-bottom: 50px;
   }
 }
 
-/* 608~960 */
-@media screen and (max-width:700px){
+/* 608~880 */
+@media screen and (max-width:880px){
   .main_wrapper{
-    width: 700px;
+    width: 880px;
     background-color: #fff8e5;
+    padding-bottom: 50px;
   }
 }
 
@@ -68,8 +71,9 @@ p{
 }
 
 .come_message_all{
+  border-radius: 10px 10px 0 0;
   background-color: #fffbf0;
-  margin: 0 auto;
+  margin: 50px auto 0 auto;
   width: 80%;
   padding: 60px;
 }
@@ -88,15 +92,20 @@ p{
   margin: 0;
   display: inline-block;
   padding-left: 30px;
+  /* background-color: red; */
+}
+
+.image{
+  float: right;
+  width: 150px;
+  position: relative;
+  top: -53px;
+  right: -34px;
 }
 
 .come_island_name, .pass_is, .postdate_is, .made{
   font-size: 20px;
   line-height: 30px;
-}
-
-.come_name{
-  color: #59A679;
 }
 
 .postdate{
@@ -155,13 +164,16 @@ p{
   color: #ff7676;
 }
 
+.be_green{
+  color: #59A679;
+}
+
 .go_message_button_wrap{
   background-color: #fffbf0;
   margin: 0 auto;
   width: 80%;
   padding: 0 60px 60px 60px;
   text-align: center;
-  border-bottom: dashed 2px #ccc9c0;
 }
 
 .go_message_button{
@@ -172,6 +184,49 @@ p{
   border: none;
   width: 100%;
   height: 72px;
+}
+
+.go_message_all{
+  border-top: dashed 2px #ccc9c0; 
+  background-color: red;
+  /* background-color: #fffbf0; */
+  border-radius: 0 0 10px 10px;
+  padding: 30px 60px;
+  margin: 0 auto 0px auto;
+  width: 80%;
+}
+
+.go_message{
+  text-align: center;
+  /* border-bottom: dashed 2px #ccc9c0; */
+}
+
+.go_message_info{
+  height: 40px;
+  /* background-color: red; */
+}
+
+.go_message_imfrom{
+  font-size: 25px;
+  float: left;
+}
+
+.go_message_delete{
+  float: right;
+  font-size: 15px;
+  color: #fff;
+  background-color: #aca395;
+  border-style: none;
+  border-radius: 5px;
+  padding: 5px 15px;
+}
+
+.go_message_memo{
+  font-size: 25px;
+  background-color: #fff;
+  border: solid 5px #f8e4a9;
+  border-radius: 10px;
+  padding: 10px 5px;
 }
 
 a {

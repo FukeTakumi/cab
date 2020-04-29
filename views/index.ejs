@@ -17,8 +17,7 @@
         <div class="come_message_all">
           <div class="come_message_left">
             <p class="come_island_name"><%=come_message.island_name%>島</p>
-            <p class="come_name"><%=come_message.name%></p>
-            <!-- <p><come_message.fruit></p> -->
+            <p class="come_name be_green"><%=come_message.name%></p>
             <p class="pass_is">島パスワード</p>
             <p class="pass"><%=come_message.pass%></p>
             <p class="postdate_is">しめきり</p>
@@ -27,6 +26,7 @@
 
           <div class="come_message_right">
             <p class="cab_status">カブの<span class="be_red"><%=come_message.cab_status%></span></p>
+            <img src="/images/orange.png" alt="オレンジ" class="image">
             <p class="cab_bell"><%=come_message.cab_bell%><span class="bell">ベル</span></p>
             <p class="want_is">ほしい！</p>
             <p class="want_dummy"></p>
@@ -41,23 +41,30 @@
         <input type="hidden" name="_method" value="delete">
         <input type="submit" value="削除">
       </form> -->
-
-      <div class="go_message">
+    <div class="go_message_all">
     <%come_message.go_messages.map((go_message)=>{%>
-        <p><%=go_message.island_name%></p>
-        <p><%=go_message.name%></p>
-        <p><%=go_message.memo%></p>
-        <form action="/go/delete/<%=go_message.id%>" method="POST">
-          <input type="hidden" name="_method" value="delete">
-          <input type="submit" value="削除">
-        </form>
+      
+      <div class="go_message">
+        <div class="go_message_info">
+          <p class="go_message_imfrom"><%=go_message.island_name%>島の<span class="be_green"><%=go_message.name%></span></p>
+          <form action="/go/delete/<%=go_message.id%>" method="POST">
+            <input type="hidden" name="_method" value="delete">
+            <button type="submit" class="go_message_delete">けす</button>
+          </form>
+        </div>
+        <p class="go_message_memo"><%=go_message.memo%></p>
         <br>
         <br>
-    <%})%>
       </div>
     <%})%>
     </div>
-    
+    <%})%>
+    </div>
+    <script
+    src="https://code.jquery.com/jquery-3.5.0.min.js"
+    integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
+    crossorigin="anonymous"></script>
     <script src="/javascripts/time.js"></script>
+    <script src="/javascripts/go_message.js"></script>
   </body>
 </html>
