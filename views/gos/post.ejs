@@ -3,17 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <title>cab</title>
+    <link rel='stylesheet' href='/stylesheets/go_message_style.css' />
 </head>
 <body>
-    <p>いきたい</p>
-    <form action="/go/create/<%= id %>" method="POST">
-        <input type="text" value="GDPカンスト" name="island_name">
-        <p>島の</p>
-        <input type="text" value="まじょがり" name="name">
-        <p>です</p>
-        <p>メモ</p>
-        <input type="text" value="hogehoge" name="memo">
-        <input type="submit" value="投稿する">
-    </form>
+    <div class="whole_wrapper">
+    <h1 class="go_title">いきたい！</h1>
+        <div class="main_wrapper">
+        <form action="/go/create/<%= id %>" method="POST" autocomplete="off">
+            <div class="imfrom_wrapper">
+                <input type="text" value="" name="island_name" class="imfrom_island" maxlength="10">
+                <span>島の　</span>
+                <br>
+                <input type="text" value="" name="name" class="imfrom_name" maxlength="10">
+                <span>です。</span>
+            </div>
+        <div class="contents_wrapper">
+            <div class="contents_wrapper_left">
+                <p class="memo_is">メモ：</p>
+                <p class="limit">(30文字以内)</p>
+            </div>
+            <textarea type="text" maxlength="30" name="memo" class="input_memo"></textarea>
+        </div>
+        <div class="send_or_cancel">
+            <button type="submit" class="button_send">これでおくる</button>
+        </form>
+            <form action="/" autocomplete="off">
+                <button type="submit" class="button_cancel">やっぱやめる</button>
+            </form>
+        </div>
+    </div>
+    </div>
 </body>
 </html>

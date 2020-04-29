@@ -16,7 +16,7 @@ h1{
 }
 
 h1:after {
-    background-color: #ff7676;
+    background-color: #82edaf;
     border-radius: 5px;
     content: "";
     display: block;
@@ -29,7 +29,7 @@ h1:after {
         margin: 0 auto;
         background-color: #fff8e5;
         width: 80%;
-        padding-bottom: 50px;
+        height: 100%;
     }
     .main_wrapper{
         margin: 0 auto;
@@ -46,6 +46,7 @@ h1:after {
         margin: 0 auto;
         background-color: #fff8e5;
         padding-bottom: 50px;
+        height: 100%;
     }
     .main_wrapper{
         margin: 0 auto;
@@ -61,6 +62,7 @@ h1:after {
         margin: 0 auto;
         background-color: #fff8e5;
         padding-bottom: 50px;
+        height: 100%;
     }
     .main_wrapper{
         margin: 0 auto;
@@ -71,15 +73,11 @@ h1:after {
     }
 }
 
-input, select{
+input{
     text-align: center;
     border: solid 5px #f8e4a9;
     border-radius: 10px;
     background-color: #fff;
-}
-
-select{
-    text-align: center;
 }
 
 textarea{
@@ -89,13 +87,14 @@ textarea{
     border: solid 5px #f8e4a9;
     border-radius: 10px;
     font-size: 18px;
+    float:right;
 }
 
-.input_fruit, .input_cab_bell, .input_pass, textarea{
+/* .input_fruit, .input_cab_bell, .input_pass, textarea{
     margin: 15.5px 0;
-}
+} */
 
-.come_title{
+.go_title{
     font-size: 60px;
     text-align: center;
 }
@@ -104,7 +103,7 @@ textarea{
     /* background-color: red; */
     text-align: center;
     font-size: 35px;
-    padding-bottom:50px;
+    padding-bottom:20px;
 }
 
 .imfrom_island, .imfrom_name{
@@ -120,8 +119,11 @@ textarea{
 
 .contents_wrapper{
     /* background-color: green; */
-    height: 400px;
-    position: relative;
+    height: 95px;
+    padding-top: 20px;
+    margin-bottom: 50px;
+    border-top: dashed 1px #ccc9c0;
+    border-bottom: dashed 1px #ccc9c0;
 }
 
 .send_or_cancel{
@@ -130,89 +132,15 @@ textarea{
 }
 
 .contents_wrapper_left{
-    /* background-color: pink; */
+    background-color: pink;
     float: left;
     font-size: 30px;
-    line-height: 79px;
-    position: absolute;
-    top: 0;
-    z-index: 2;
+    height: 0px;
 }
 
 .limit{
     font-size: 18px;
-    line-height: 0;
     margin-bottom: 40px;
-    position: relative;
-    bottom: 15px;
-}
-
-.input_cab_status{
-    color: #4d3f30;
-    height: 40px;
-    width: 100px;
-    font-size: 18px;
-    position: relative;
-    bottom: 5px;
-    margin: 0;
-}
-
-.contents_wrapper_right{
-    /* background-color: yellow; */
-    float:right;
-    text-align: right;
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: 2;
-}
-
-.input_fruit{
-    color: #4d3f30;
-    height: 50px;
-    width: 134px;
-    font-size: 20px;
-}
-
-.input_cab_bell{
-    font-size: 20px;
-    width: 82px;
-    height: 40px;
-}
-
-.bell{
-    font-size: 18px;
-}
-
-.input_pass{
-    font-size: 20px;
-    width: 122px;
-    height: 40px;
-}
-
-.line_dummy{
-    height: 80px;
-    border-top: dashed 1px #ccc9c0;
-    position: relative;
-    top: 0px;
-    z-index: 1;
-}
-
-.line_dummy_bold{
-    height: 105px;
-    border-top: dashed 1px #ccc9c0;
-    border-bottom: dashed 1px #ccc9c0;
-    position: relative;
-    top: 0px;
-    z-index: 1;
-}
-
-.line_dummy_bottom{
-    height: 81px;
-    border-bottom: dashed 1px #ccc9c0;
-    position: relative;
-    top: 0px;
-    z-index: 1;
 }
 
 form{
@@ -229,14 +157,9 @@ form{
 }
 
 .button_send{
-    background-color: #ff7676;
+    background-color: #82edaf;
 }
 
 .button_cancel{
     background-color: #ccc9c0;
 }
-
-
-
-
-
