@@ -2,20 +2,15 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   color: #4d3f30;
   background-color: #ffecdc;
-
+  height: 900px;
 }
 
 p{
   margin: 0;
 }
 
-@media screen and (max-width:1114px) and (min-width:608px) {
-  .main_wrapper{
-    margin: 0 auto;
-    background-color: #fff8e5;
-  }
-}
 
+/* 1115~1920 */
 @media screen and (min-width:1115px) {
   .main_wrapper{
     margin: 0 auto;
@@ -24,11 +19,28 @@ p{
   }
 }
 
-@media screen and (max-width:607px){
+/* 961~1114 */
+@media screen and (max-width:1114px) and (min-width:701px) {
+  .main_wrapper{
+    margin: 0 auto;
+    background-color: #fff8e5;
+  }
+}
+
+/* 608~960 */
+@media screen and (max-width:700px){
+  .main_wrapper{
+    width: 700px;
+    background-color: #fff8e5;
+  }
+}
+
+/* 0~607 */
+/* @media screen and (max-width:607px){
   .main_wrapper{
     background-color: #000;
   }
-}
+} */
 
 .index_top{
   margin: 0 auto;

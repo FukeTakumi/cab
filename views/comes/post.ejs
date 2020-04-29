@@ -3,36 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <title>cab</title>
+    <link rel='stylesheet' href='/stylesheets/come_message_style.css' />
 </head>
 <body>
-    <p>きてほしい</p>
-    <form action="/come/create" method="POST" id="come_form">
-        <input type="text" value="GDPカンスト" name="island_name">
-        <p>島の</p>
-        <input type="text" value="まじょがり" name="name">
-        <p>です</p>
-        <p>フルーツ</p>
-        <select name="fruit">
-            <option value=""></option>
-            <option value="リンゴ">リンゴ</option>
-            <option value="オレンジ">オレンジ</option>
-            <option value="ナシ">ナシ</option>
-            <option value="さくらんぼ">さくらんぼ</option>
-            <option value="モモ">モモ</option>
-        </select>
-        <p>カブの</p>
-        <select name="cab_status">
-            <option value=""></option>
-            <option value="売り値">売り値</option>
-            <option value="買い値">買い値</option>
-        </select>
-        <input type="number" value=123 name="cab_bell">
-        <p>ベル</p>
-        <p>ほしい！</p>
-        <input type="text" value="hogehoge" name="want">
-        <p>島パスワード</p>
-        <input type="text" value="hogehoge" name="pass">
-        <button type="submit">おくる！</button>
-    </form>
+    <div class="whole_wrapper">
+    <h1 class="come_title">きてほしい！</h1>
+    <div class="main_wrapper">
+        <form action="/come/create" method="POST" id="come_form" autocomplete="off">
+            <div class="imfrom_wrapper">
+                <input type="text" value="" name="island_name" class="imfrom_island" maxlength="10">
+                <span>島の</span>
+                <br>
+                <input type="text" value="" name="name" class="imfrom_name" maxlength="10">
+                <span>です。</span>
+            </div>
+            <div class="contents_wrapper">
+                <div class="line_dummy"></div>
+                <div class="line_dummy"></div>
+                <div class="line_dummy_bold"></div>
+                <div class="line_dummy_bottom"></div>
+                <div class="contents_wrapper_left">
+                    <p>島のフルーツ：</p>
+                    <span>カブの</span>
+                    <select name="cab_status" class="input_cab_status">
+                        <option value=""></option>
+                        <option value="売り値">売り値</option>
+                        <option value="買い値">買い値</option>
+                    </select>
+                    <span>：</span>
+                    <p>ほしい！：</p>
+                    <p class="limit">(30文字以内)</p>
+                    <p>島パスワード：</p>
+                </div>
+
+                <div class="contents_wrapper_right">
+                    <select name="fruit" class="input_fruit">
+                        <option value=""></option>
+                        <option value="リンゴ">リンゴ</option>
+                        <option value="オレンジ">オレンジ</option>
+                        <option value="ナシ">ナシ</option>
+                        <option value="さくらんぼ">さくらんぼ</option>
+                        <option value="モモ">モモ</option>
+                    </select>
+                    <br>
+                    <input type="number" name="cab_bell" class="input_cab_bell">
+                    <span class="bell">ベル</span>
+                    <br>
+                    <textarea type="text" maxlength="30" name="want" class="input_want"></textarea>
+                    <br>
+                    <input type="text" value="" name="pass" class="input_pass" maxlength="5">
+                </div>
+            </div>
+            <div class="send_or_cancel">
+                <button type="submit" class="button_send">これでおくる</button>
+            </form>
+            <form action="/" autocomplete="off">
+                <button type="submit" class="button_cancel">やっぱやめる</button>
+            </form>
+            </div>
+        
+    </div>
+    </div>
 </body>
 </html>
