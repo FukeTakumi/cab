@@ -1,8 +1,19 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+header{
+    height: 80px;
+    background-color:#4d3f30;
+}
+
 body {
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
     color: #4d3f30;
     background-color: #ffecdc;
-    height: 900px;
+    position: relative;
+    height: 980px;
 }
 
 p{
@@ -29,10 +40,10 @@ h1:after {
         margin: 0 auto;
         background-color: #fff8e5;
         width: 80%;
-        height: 100%;
+        padding-bottom: 50px;
     }
     .main_wrapper{
-        margin: 0 auto;
+        margin: 0 auto; 
         width: 600px;
         background-color: #fffbf0;
         padding:50px 100px;
@@ -46,13 +57,12 @@ h1:after {
         margin: 0 auto;
         background-color: #fff8e5;
         padding-bottom: 50px;
-        height: 100%;
     }
     .main_wrapper{
         margin: 0 auto;
         width: 70%;
         background-color: #fffbf0;
-        padding:50px 100px ;
+        padding:50px 100px;
         border-radius: 20px;
     }
 }
@@ -62,7 +72,6 @@ h1:after {
         margin: 0 auto;
         background-color: #fff8e5;
         padding-bottom: 50px;
-        height: 100%;
     }
     .main_wrapper{
         margin: 0 auto;
@@ -162,4 +171,25 @@ form{
 
 .button_cancel{
     background-color: #ccc9c0;
+}
+
+footer{
+    text-align: center;
+    color: #fff;
+    width: 100%;
+    margin-top: 30px;
+    padding:10px 0 ;
+    height: 100px;
+    background-color: #4d3f30;
+    position: absolute;
+    bottom: 0px;
+}
+
+footer p{
+    margin-top: 7px;
+}
+
+.twitter, .github{
+    width: 30px;
+    margin:10px 5px 0 5px;
 }

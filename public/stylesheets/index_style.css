@@ -1,8 +1,17 @@
+/* #fff8e5 */
+*{
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px 'Hiragino Maru Gothic Pro', Helvetica, Arial, sans-serif;
   color: #4d3f30;
-  background-color: #ffecdc;
-  height: 900px;
+  background-color: #ffedd1;
+  background-repeat: repeat-x;
+  min-height: 1000px;
+  position: relative;
+  padding-bottom: 220px;
 }
 
 p{
@@ -10,22 +19,14 @@ p{
 }
 
 
-/* 1115~1920 */
-@media screen and (min-width:1115px) {
-  .main_wrapper{
-    margin: 0 auto;
-    width: 80%;
-    background-color: #fff8e5;
-    padding-bottom: 50px;
-  }
-}
-
 /* 881~1114 */
-@media screen and (max-width:1114px) and (min-width:881px) {
+@media screen and (min-width:881px) {
   .main_wrapper{
     margin: 0 auto;
+    width: 880px;
     background-color: #fff8e5;
     padding-bottom: 50px;
+    border-radius: 20px;
   }
 }
 
@@ -35,7 +36,14 @@ p{
     width: 880px;
     background-color: #fff8e5;
     padding-bottom: 50px;
+    border-radius: 20px;
   }
+}
+
+header{
+  height: 80px;
+  background-color:#4d3f30;
+  margin-bottom: 30px;
 }
 
 /* 0~607 */
@@ -49,17 +57,19 @@ p{
   margin: 0 auto;
   text-align: center;
   width:100%;
-  padding: 30px 0px;
+  padding: 30px 0;
 }
 
 .index_title {
   font-size: 60px;
+  padding: 10px 0;
 }
 
 .come_message_button{
   background-color: #ff7676;
   border-radius: 10px;
-  font-size: 30px;
+  font-size: 35px;
+  font-family: "Nico Moji";
   color: #fff;
   border: none;
   width: 80%;
@@ -71,11 +81,11 @@ p{
 }
 
 .come_message_all{
-  border-radius: 10px 10px 0 0;
-  background-color: #fffbf0;
+  border-top: dashed 5px #ccc9c0;
+  background-color: #fff8e5;
   margin: 50px auto 0 auto;
   width: 80%;
-  padding: 60px;
+  padding: 60px 60px 30px 60px;
 }
 
 .come_message_left{
@@ -83,15 +93,15 @@ p{
   margin: 0;
   float: left;
   border-right: solid 1px #ccc9c0;
-  padding-right: 5px;
-  margin-right: 20px;
+  padding:0 5px 10px 0;
 }
 
 .come_message_right{
   width: 64%;
-  margin: 0;
+  margin: 0 0 0 -1px;
   display: inline-block;
-  padding-left: 30px;
+  padding-left: 50px;
+  border-left: solid 1px #ccc9c0;
   /* background-color: red; */
 }
 
@@ -145,19 +155,19 @@ p{
   top: -22px;
   background-color: #fff;
   font-size: 25px;
-  width: 100%;
+  width: 95%;
   border-radius: 0 0 20px 20px;
-  padding:0 0 20px 20px ;
+  padding:0 20px 20px 20px ;
 }
 
 .want_dummy{
   position: relative;
   top: -22px;
   background-color: #fff;
-  width: 100%;
+  width: 95%;
   height: 22px;
   border-radius: 0 20px 0 0;
-  padding:10px 0 0 20px ;
+  padding:10px 20px 0 20px ;
 }
 
 .be_red{
@@ -169,17 +179,18 @@ p{
 }
 
 .go_message_button_wrap{
-  background-color: #fffbf0;
+  background-color: #fff8e5;
   margin: 0 auto;
   width: 80%;
-  padding: 0 60px 60px 60px;
+  padding: 20px 60px;
   text-align: center;
 }
 
 .go_message_button{
   background-color: #82edaf;
   border-radius: 10px;
-  font-size: 30px;
+  font-size: 35px;
+  font-family: "Nico Moji";
   color: #fff;
   border: none;
   width: 100%;
@@ -187,27 +198,30 @@ p{
 }
 
 .go_message_all{
-  border-top: dashed 2px #ccc9c0; 
-  background-color: red;
-  /* background-color: #fffbf0; */
-  border-radius: 0 0 10px 10px;
-  padding: 30px 60px;
+  background-color: #fff8e5;
+  padding: 0px 60px;
   margin: 0 auto 0px auto;
   width: 80%;
 }
 
 .go_message{
-  text-align: center;
+  text-align: left;
   /* border-bottom: dashed 2px #ccc9c0; */
 }
 
+/* .reply_arrow{
+  width: 30px;
+  float: left;
+
+} */
+
 .go_message_info{
-  height: 40px;
+  height: 33px;
   /* background-color: red; */
 }
 
 .go_message_imfrom{
-  font-size: 25px;
+  font-size: 20px;
   float: left;
 }
 
@@ -218,17 +232,38 @@ p{
   background-color: #aca395;
   border-style: none;
   border-radius: 5px;
-  padding: 5px 15px;
+  padding: 3px 15px;
 }
 
 .go_message_memo{
-  font-size: 25px;
+  font-size: 20px;
   background-color: #fff;
-  border: solid 5px #f8e4a9;
-  border-radius: 10px;
-  padding: 10px 5px;
+  border-radius:0px 20px 20px 20px;
+  padding: 15px 20px;
+  margin-top: 10px;
 }
 
 a {
   color: #00B7FF;
+}
+
+footer{
+  text-align: center;
+  color: #fff;
+  width: 100%;
+  margin-top: 30px;
+  padding:10px 0 ;
+  height: 100px;
+  background-color: #4d3f30;
+  position: absolute;
+  bottom: 0px;
+}
+
+footer p{
+  margin-top: 7px;
+}
+
+.twitter, .github{
+  width: 30px;
+  margin:10px 5px 0 5px;
 }

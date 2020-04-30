@@ -10,10 +10,29 @@ router.get('/create',(req, res)=>{
 //きてほしい新規作成
 router.post('/create',(req, res)=>{
     let date = new Date();
+    let fruit = ""
+    switch (req.body.fruit) {
+    case 'リンゴ':
+        fruit = "apple"
+        break;
+    case 'オレンジ':
+        fruit = "orange"
+        break;
+    case "ナシ":
+        fruit = "nashi"
+        break;
+    case "さくらんぼ":
+        fruit = "cherry"
+        break;
+    case "モモ":
+        fruit = "peach"
+        break;
+    default:
+    }
     const params = {
         island_name:req.body.island_name,
         name:req.body.name,
-        fruit:req.body.fruit,
+        fruit:fruit,
         cab_status:req.body.cab_status,
         cab_bell:req.body.cab_bell,
         want:req.body.want,

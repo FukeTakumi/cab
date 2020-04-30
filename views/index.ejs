@@ -2,9 +2,13 @@
 <html>
   <head>
     <title>cab</title>
+    <link href="https://fonts.googleapis.com/earlyaccess/nicomoji.css" rel="stylesheet">
     <link rel='stylesheet' href='/stylesheets/index_style.css' />
   </head>
   <body>
+    <header>
+      <p>ヘッダー</p>
+    </header>
     <div class="main_wrapper">
       <div class="index_top">
         <h1 class="index_title">現在の募集</h1>
@@ -25,27 +29,25 @@
           </div>
 
           <div class="come_message_right">
-            <p class="cab_status">カブの<span class="be_red"><%=come_message.cab_status%></span></p>
-            <img src="/images/orange.png" alt="オレンジ" class="image">
+            <p class="cab_status">カブの<span class="cab_status_is"><%=come_message.cab_status%></span></p>
+            <img src="/images/<%=come_message.fruit%>.png" alt="<%=come_message.fruit%>" class="image">
             <p class="cab_bell"><%=come_message.cab_bell%><span class="bell">ベル</span></p>
             <p class="want_is">ほしい！</p>
             <p class="want_dummy"></p>
             <p class="want"><%=come_message.want%></p>
           </div>
         </div>
-        <form action="/go/create/<%=come_message.id%>" method="GET" class="go_message_button_wrap">
-          <button type="submit" class="go_message_button">いきたい！</button>
-        </form>
       </div>
-      <!-- <form action="/come/delete/<=come_message.id>" method="POST">
+      <form action="/come/delete/<%=come_message.id%>" method="POST">
         <input type="hidden" name="_method" value="delete">
         <input type="submit" value="削除">
-      </form> -->
+      </form>
     <div class="go_message_all">
     <%come_message.go_messages.map((go_message)=>{%>
       
       <div class="go_message">
         <div class="go_message_info">
+          <!-- <img src="/images/reply_arrow.png" alt="reply_arrow" class="reply_arrow"> -->
           <p class="go_message_imfrom"><%=go_message.island_name%>島の<span class="be_green"><%=go_message.name%></span></p>
           <form action="/go/delete/<%=go_message.id%>" method="POST">
             <input type="hidden" name="_method" value="delete">
@@ -58,13 +60,21 @@
       </div>
     <%})%>
     </div>
+    <form action="/go/create/<%=come_message.id%>" method="GET" class="go_message_button_wrap">
+      <button type="submit" class="go_message_button">いきたい！</button>
+    </form>
     <%})%>
     </div>
+    <footer>
+      <p>りようきやく</p>
+      <p>(c)2020：GDPカンスト島の<span class="be_green">まじょがり</span></p>
+      <a href="https://twitter.com/tititititits"><img src="/images/twitter.svg" alt="twitter" class="twitter"></a>
+      <a href="https://github.com/FukeTakumi"><img src="/images/github.svg" alt="github" class="github"></a>
+    </footer>
     <script
     src="https://code.jquery.com/jquery-3.5.0.min.js"
     integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
     crossorigin="anonymous"></script>
-    <script src="/javascripts/time.js"></script>
-    <script src="/javascripts/go_message.js"></script>
+    <script src="/javascripts/index_script.js"></script>
   </body>
 </html>

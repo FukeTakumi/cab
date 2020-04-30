@@ -1,8 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    height: 80px;
+    background-color:#4d3f30;
+}
+
 body {
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
     color: #4d3f30;
     background-color: #ffecdc;
-    height: 900px;
+    height: 1210px;
+    position: relative;
 }
 
 p{
@@ -236,6 +247,26 @@ form{
     background-color: #ccc9c0;
 }
 
+footer{
+    text-align: center;
+    color: #fff;
+    width: 100%;
+    margin-top: 30px;
+    padding:10px 0 ;
+    height: 100px;
+    background-color: #4d3f30;
+    position: absolute;
+    bottom: 0px;
+}
+
+footer p{
+    margin-top: 7px;
+}
+
+.twitter, .github{
+    width: 30px;
+    margin:10px 5px 0 5px;
+}
 
 
 
