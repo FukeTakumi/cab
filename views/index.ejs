@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>cab</title>
     <link href="https://fonts.googleapis.com/earlyaccess/nicomoji.css" rel="stylesheet">
-    <link rel='stylesheet' href='/stylesheets/index_style.css' />
+    <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c" rel="stylesheet">
+    <link rel='stylesheet' href='/stylesheets/index_style.css' media="screen and (min-width:768px)">
+    <link rel='stylesheet' href='/stylesheets/index_phone_style.css' media="only screen and (max-width:767px)">
   </head>
   <body>
     <header>
@@ -38,10 +41,10 @@
           </div>
         </div>
       </div>
-      <form action="/come/delete/<%=come_message.id%>" method="POST">
+      <!-- <form action="/come/delete/<%=come_message.id%>" method="POST">
         <input type="hidden" name="_method" value="delete">
         <input type="submit" value="削除">
-      </form>
+      </form> -->
     <div class="go_message_all">
     <%come_message.go_messages.map((go_message)=>{%>
       
@@ -66,7 +69,7 @@
     <%})%>
     </div>
     <footer>
-      <p>りようきやく</p>
+      <p class="copyright">りようきやく</p>
       <p>(c)2020：GDPカンスト島の<span class="be_green">まじょがり</span></p>
       <a href="https://twitter.com/tititititits"><img src="/images/twitter.svg" alt="twitter" class="twitter"></a>
       <a href="https://github.com/FukeTakumi"><img src="/images/github.svg" alt="github" class="github"></a>

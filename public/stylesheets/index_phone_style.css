@@ -1,0 +1,260 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (max-width:360px) {
+    .main_wrapper{
+        width: 360px;
+        background-color: #fff8e5;
+        padding-bottom: 20px;
+        border-radius: 20px;
+    }
+}
+
+@media screen and (min-width:361px) {
+    .main_wrapper{
+        width: 100%;
+        background-color: #fff8e5;
+        padding-bottom: 20px;
+        border-radius: 20px;
+    }
+}
+
+body {
+    width: 100%;
+    font-family: "M PLUS Rounded 1c";
+    font-weight: bold;
+    color: #4d3f30;
+    background-color: #ffedd1;
+    min-height: 1000px;
+    position: relative;
+    padding-bottom: 140px;
+}
+
+header{
+    height: 80px;
+    background-color:#4d3f30;
+    margin-bottom: 10px;
+}
+
+.index_title {
+    font-size:30px;
+    padding: 10px 0;
+}
+
+.index_top{
+margin: 0 auto;
+text-align: center;
+width:100%;
+padding: 10px 0;
+}
+
+.come_message_button, .go_message_button{
+border-radius: 10px;
+font-size: 30px;
+font-family: "Nico Moji";
+color: #fff;
+border: none;
+width: 95%;
+height: 50px;
+}
+
+.come_message_button{
+    background-color: #ff7676;
+}
+
+
+.go_message_button{
+    background-color: #82edaf;
+}
+
+
+
+.come_message{
+margin: 0 auto;
+}
+
+.come_message_all{
+    border-top: dashed 5px #ccc9c0;
+    background-color: #fff8e5;
+    margin: 30px auto 0 auto;
+    padding: 30px 15px 15px 15px;
+    /* background-color: green; */
+}
+
+.come_message_left{
+    width: 28%;
+    margin: 0;
+    float: left;
+    border-right: solid 1px #ccc9c0;
+    padding:0 5px 10px 0;
+    /* background-color: red; */
+}
+
+.come_message_right{
+    width: 62%;
+    margin: 0 0 0 -1px;
+    display: inline-block;
+    padding-left: 20px;
+    border-left: solid 1px #ccc9c0;
+    /* background-color: blue; */
+}
+
+.image{
+float: right;
+width: 70px;
+position: relative;
+top: -25px;
+right: -10px;
+}
+
+.come_island_name, .pass_is, .postdate_is, .made{
+font-size: 10px;
+line-height: 15px;
+}
+
+.postdate{
+display: inline;
+}
+
+.come_name, .pass, .postdate{
+    margin-bottom: 20px;
+    line-height: 20px;
+    font-size: 15px;
+}
+
+.cab_status, .bell{
+font-size: 15px;
+}
+
+.cab_bell{
+font-size: 50px;
+}
+
+.want_is{
+text-align: center;
+line-height: 22px;
+background-color: #ff7676;
+color: #fff;
+font-size: 10px;
+display: inline-block;
+border-radius: 20px;
+width: 60px;
+height: 22px;
+position: relative;
+z-index: 1;
+}
+
+.want{
+position: relative;
+top: -22px;
+background-color: #fff;
+font-size: 12px;
+width: 95%;
+border-radius: 0 0 20px 20px;
+padding:0 10px 10px 10px ;
+}
+
+.want_dummy{
+position: relative;
+top: -11px;
+background-color: #fff;
+width: 95%;
+height: 22px;
+border-radius: 0 20px 0 0;
+padding:5px 10px 0 10px ;
+}
+
+.be_red{
+color: #ff7676;
+}
+
+.be_green{
+color: #59A679;
+}
+
+.go_message_button_wrap{
+background-color: #fff8e5;
+margin: 0 auto;
+padding-bottom: 10px;
+text-align: center;
+}
+
+.go_message_all{
+background-color: #fff8e5;
+margin: 0 auto 0px auto;
+width: 90%;
+}
+
+.go_message{
+text-align: left;
+height: 100px;
+/* border-bottom: dashed 2px #ccc9c0; */
+}
+
+/* .reply_arrow{
+width: 30px;
+float: left;
+
+} */
+
+.go_message_info{
+height: 30px;
+}
+
+.go_message_imfrom{
+font-size: 15px;
+float: left;
+max-width: 80%;
+}
+
+.go_message_delete{
+    float: right;
+    font-size: 10px;
+    color: #fff;
+    background-color: #aca395;
+    border-style: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin:0 5px 5px 0;
+}
+
+.go_message_memo{
+    font-size: 12px;
+    background-color: #fff;
+    border-radius:0px 20px 20px 20px;
+    padding: 10px 15px;
+}
+
+a {
+color: #00B7FF;
+}
+
+footer{
+text-align: center;
+color: #fff;
+width: 100%;
+margin-top: 30px;
+padding:5px 0 10px 0;
+height: 100px;
+background-color: #4d3f30;
+position: absolute;
+bottom: 0px;
+}
+
+footer p{
+margin-top: 7px;
+}
+
+.copyright{
+margin: 7px auto 0 auto;
+width: 100%;
+border-bottom: dashed 1px #fff;
+}
+
+.twitter, .github{
+width: 30px;
+margin:10px 5px 0 5px;
+}

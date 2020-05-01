@@ -8,7 +8,6 @@ body {
   font: 14px 'Hiragino Maru Gothic Pro', Helvetica, Arial, sans-serif;
   color: #4d3f30;
   background-color: #ffedd1;
-  background-repeat: repeat-x;
   min-height: 1000px;
   position: relative;
   padding-bottom: 220px;
@@ -19,7 +18,7 @@ p{
 }
 
 
-/* 881~1114 */
+/*pc広画面 881~ */
 @media screen and (min-width:881px) {
   .main_wrapper{
     margin: 0 auto;
@@ -30,8 +29,8 @@ p{
   }
 }
 
-/* 608~880 */
-@media screen and (max-width:880px){
+/*pc狭画面 601~880 */
+@media screen and (max-width:880px) {
   .main_wrapper{
     width: 880px;
     background-color: #fff8e5;
@@ -45,13 +44,6 @@ header{
   background-color:#4d3f30;
   margin-bottom: 30px;
 }
-
-/* 0~607 */
-/* @media screen and (max-width:607px){
-  .main_wrapper{
-    background-color: #000;
-  }
-} */
 
 .index_top{
   margin: 0 auto;
@@ -261,6 +253,12 @@ footer{
 
 footer p{
   margin-top: 7px;
+}
+
+.copyright{
+  margin: 7px auto 0 auto;
+  width: 100%;
+  border-bottom: dashed 1px #fff;
 }
 
 .twitter, .github{
