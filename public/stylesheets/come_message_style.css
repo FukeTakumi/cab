@@ -67,21 +67,6 @@ h1:after {
     }
 }
 
-@media screen and (max-width:780px){
-    .whole_wrapper{
-        margin: 0 auto;
-        background-color: #fff8e5;
-        padding-bottom: 50px;
-    }
-    .main_wrapper{
-        margin: 0 auto;
-        width: 540px;
-        background-color: #fffbf0;
-        padding:50px 100px ;
-        border-radius: 20px;
-    }
-}
-
 input, select{
     text-align: center;
     border: solid 5px #f8e4a9;

@@ -1,0 +1,239 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    height: 80px;
+    background-color:#4d3f30;
+}
+
+h1:after {
+    background-color: #ff7676;
+    border-radius: 5px;
+    content: "";
+    display: block;
+    height: 10px;
+    width: 60%;
+    margin: 0 auto;
+}
+
+body {
+    font-family: "M PLUS Rounded 1c";
+    font-weight: bold;
+    color: #4d3f30;
+    background-color: #ffecdc;
+    height: 850px;
+    position: relative;
+}
+
+
+.whole_wrapper{
+    margin: 0 auto;
+    /* background-color: red; */
+    background-color: #fff8e5;
+    padding-bottom: 50px;
+}
+.main_wrapper{
+    margin: 0 auto;
+    width: 90%;
+    background-color: #fffbf0;
+    border-radius: 20px;
+    padding: 40px 10px;
+}
+
+input, select{
+    text-align: center;
+    border: solid 3px #f8e4a9;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+select{
+    text-align: center;
+}
+
+textarea{
+    margin: 16px 0 9px 0;
+    padding: 5px;
+    width: 160px;
+    height: 40px;
+    border: solid 3px #f8e4a9;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.input_fruit, .input_cab_bell, .input_pass{
+    margin: 9px 0;
+}
+
+.come_title{
+    font-size: 30px;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.imfrom_wrapper{
+    /* background-color: red; */
+    text-align: center;
+    font-size: 20px;
+    padding-bottom:30px;
+}
+
+.imfrom_island, .imfrom_name{
+    font-size: 13px;
+    padding: 5px 0;
+    position: relative;
+    bottom: 6px;
+    margin-bottom: 3px;
+}
+
+.contents_wrapper{
+    height: 280px;
+    position: relative;
+    /* background-color: chartreuse; */
+}
+
+.send_or_cancel{
+    text-align: center;
+}
+
+.contents_wrapper_left{
+    float: left;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 55px;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    /* background-color: chocolate; */
+}
+
+.limit{
+    font-size: 15px;
+    line-height: 12px;
+    position: relative;
+    bottom: 11px;
+    margin-bottom: 14px;
+}
+
+.input_cab_status{
+    color: #4d3f30;
+    height: 35px;
+    width: 70px;
+    font-size: 13px;
+    position: relative;
+    bottom: 5px;
+    margin: 0;
+}
+
+.contents_wrapper_right{
+    float:right;
+    text-align: right;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 2;
+    /* background-color: cornflowerblue; */
+}
+
+.input_fruit{
+    color: #4d3f30;
+    height: 35px;
+    width: 90px;
+    font-size: 13px;
+}
+
+.input_cab_bell{
+    font-size: 13px;
+    width: 55px;
+    height: 30px;
+}
+
+.bell{
+    font-size: 13px;
+    font-weight: normal;
+}
+
+.input_pass{
+    font-size: 13px;
+    width: 80px;
+    height: 30px;
+}
+
+.line_dummy{
+    height: 53px;
+    border-top: dashed 1px #ccc9c0;
+    position: relative;
+    top: 0px;
+    z-index: 1;
+}
+
+.line_dummy_bold{
+    height: 82px;
+    border-top: dashed 1px #ccc9c0;
+    border-bottom: dashed 1px #ccc9c0;
+    position: relative;
+    top: 0px;
+    z-index: 1;
+}
+
+.line_dummy_bottom{
+    height: 57px;
+    border-bottom: dashed 1px #ccc9c0;
+    position: relative;
+    top: 0px;
+    z-index: 1;
+}
+
+form{
+    display: inline;
+}
+
+.button_send, .button_cancel{
+    border-style: none;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 5px 10px;
+}
+
+.button_send{
+    background-color: #ff7676;
+}
+
+.button_cancel{
+    background-color: #ccc9c0;
+}
+
+footer{
+text-align: center;
+color: #fff;
+width: 100%;
+margin-top: 30px;
+padding:5px 0 10px 0;
+height: 100px;
+background-color: #4d3f30;
+position: absolute;
+bottom: 0px;
+}
+
+footer p{
+margin-top: 7px;
+}
+
+.copyright{
+    margin: 7px auto 0 auto;
+    width: 100%;
+    border-bottom: dashed 1px #fff;
+}
+
+.twitter, .github{
+    width: 30px;
+    margin:10px 5px 0 5px;
+}
+
+.be_green{
+    color: #59A679;
+}

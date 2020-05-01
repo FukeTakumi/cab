@@ -5,7 +5,7 @@
 }
 
 body {
-  font: 14px 'Hiragino Maru Gothic Pro', Helvetica, Arial, sans-serif;
+  font-family: "M PLUS Rounded 1c";
   color: #4d3f30;
   background-color: #ffedd1;
   min-height: 1000px;
@@ -61,7 +61,6 @@ header{
   background-color: #ff7676;
   border-radius: 10px;
   font-size: 35px;
-  font-family: "Nico Moji";
   color: #fff;
   border: none;
   width: 80%;
@@ -182,7 +181,6 @@ header{
   background-color: #82edaf;
   border-radius: 10px;
   font-size: 35px;
-  font-family: "Nico Moji";
   color: #fff;
   border: none;
   width: 100%;

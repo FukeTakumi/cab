@@ -4,22 +4,11 @@
     padding: 0;
 }
 
-@media screen and (max-width:360px) {
-    .main_wrapper{
-        width: 360px;
-        background-color: #fff8e5;
-        padding-bottom: 20px;
-        border-radius: 20px;
-    }
-}
-
-@media screen and (min-width:361px) {
-    .main_wrapper{
-        width: 100%;
-        background-color: #fff8e5;
-        padding-bottom: 20px;
-        border-radius: 20px;
-    }
+.main_wrapper{
+    width: 100%;
+    background-color: #fff8e5;
+    padding-bottom: 20px;
+    border-radius: 20px;
 }
 
 body {
@@ -53,8 +42,7 @@ padding: 10px 0;
 
 .come_message_button, .go_message_button{
 border-radius: 10px;
-font-size: 30px;
-font-family: "Nico Moji";
+font-size: 20px;
 color: #fff;
 border: none;
 width: 95%;
@@ -129,8 +117,15 @@ display: inline;
 font-size: 15px;
 }
 
+.bell{
+    line-height: 0px;
+    position: absolute;
+    top: 50px;
+}
+
 .cab_bell{
 font-size: 50px;
+position: relative;
 }
 
 .want_is{
@@ -178,7 +173,7 @@ color: #59A679;
 .go_message_button_wrap{
 background-color: #fff8e5;
 margin: 0 auto;
-padding-bottom: 10px;
+padding:20px 0 10px 0;
 text-align: center;
 }
 
