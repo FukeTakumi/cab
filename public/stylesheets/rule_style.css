@@ -1,0 +1,18 @@
+.rules{
+    padding-top: 20px;
+    font-size: 18px;
+    margin:0 auto;
+    width: 95%;
+}
+
+ol{
+    width: 95%;
+    margin:20px auto 0 auto;
+}
+
+ol li{
+    font-size: 15px;
+    list-style-type: decimal;
+    margin-left: 50px;
+    line-height: 40px;
+}

@@ -53,33 +53,8 @@ router.get('/',(req, res)=>{
   });
 });
 
-//一覧表示オリジナル
-router.get('/',(req, res)=>{
-  db.come_message.findAll().then((come_messages)=>{
-    for(let i = 0;i < come_messages.length; i++){
-      let hours = Number(come_messages[i].postdate.split(':')[0]);
-      let minutes = Number(come_messages[i].postdate.split(':')[1]);
-      console.log(hours);
-      console.log(minutes);
-
-      if(passing_time(hours,minutes)){
-        let drop_filter = {
-          where:{
-            id:come_messages[i].id
-          }
-        };
-        db.come_message.destroy(drop_filter)
-      }
-    }
-    const filter = {
-      include:[{
-        model:db.go_message
-      }]
-    };
-    db.come_message.findAll(filter).then((results)=>{
-      res.render('index.ejs',{come_messages:results});
-    });
-  });
-});
+router.get('/rule',(req,res) =>{
+  res.render('rule.ejs');
+})
 
 module.exports = router;
