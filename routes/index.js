@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 const db = require('../models/index');
 
+
 ////時間制限で削除する処理////
 
 //残り時間を計算する関数

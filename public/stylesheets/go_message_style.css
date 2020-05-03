@@ -4,8 +4,13 @@
 }
 
 header{
-    height: 80px;
+    height: 100px;
     background-color:#4d3f30;
+    text-align: center;
+}
+
+.title_logo{
+    margin-top: 15px;
 }
 
 body {
@@ -157,23 +162,54 @@ form{
 }
 
 .button_send, .button_cancel{
+    font-family: "M PLUS Rounded 1c";
+    font-weight: bolder;
     border-style: none;
     color: #fff;
     font-size: 25px;
-    border-radius: 5px;
+    border-radius: 10px;
     margin: 10px;
     padding: 5px 20px;
 }
 
 .button_send{
     background-color: #82edaf;
+    border-bottom: #67bf8c solid 5px;
+    transition:background-color 0.2s;
+}
+
+.button_send:hover{
+    background-color: #9aedbd;
+    border-bottom-color: #76d19c;
+    cursor: pointer;
+}
+
+.button_send:active{
+    border-style:none;
+    position: relative;
+    top: 5px;
 }
 
 .button_cancel{
-    background-color: #ccc9c0;
+    background-color: #aca395;
+    border-bottom: #8b765d solid 5px;
+    transition:background-color 0.2s;
+}
+
+.button_cancel:hover{
+    background-color: #b6b6b6;
+    border-bottom-color: #717070;
+    cursor: pointer;
+}
+
+.button_cancel:active{
+    border-style:none;
+    position: relative;
+    top: 5px;
 }
 
 footer{
+    font-size: 16px;
     text-align: center;
     color: #fff;
     width: 100%;
@@ -187,6 +223,28 @@ footer{
 
 footer p{
     margin-top: 7px;
+}
+
+.copyright{
+    margin: 7px auto 0 auto;
+    width: 100%;
+    border-bottom: dashed 1px #fff;
+}
+
+footer a{
+    color: #fff;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+footer a:hover{
+    color: #59A679;
+}
+
+.copyright{
+    margin: 7px auto 0 auto;
+    width: 100%;
+    border-bottom: dashed 1px #fff;
 }
 
 .twitter, .github{

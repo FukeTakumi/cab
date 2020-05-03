@@ -27,6 +27,39 @@ p{
     padding-bottom: 50px;
     border-radius: 20px;
   }
+
+  header{
+    height: 100px;
+    background-color:#4d3f30;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  footer{
+    text-align: center;
+    color: #fff;
+    width: 100%;
+    margin-top: 30px;
+    padding:10px 0 ;
+    height: 100px;
+    background-color: #4d3f30;
+    position: absolute;
+    bottom: 0px;
+  }
+
+  #update_button{
+    width: 10%;
+    position: fixed;
+    bottom:50px ;
+    right:50px;
+    transition: 0.2s;
+  }
+
+  #update_button:hover{
+    bottom: 50px;
+    right:50px;
+    width: 10.5%;
+  }
 }
 
 /*pc狭画面 601~880 */
@@ -37,12 +70,49 @@ p{
     padding-bottom: 50px;
     border-radius: 20px;
   }
+  header{
+    width: 880px;
+    height: 100px;
+    background-color:#4d3f30;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  footer{
+    text-align: center;
+    color: #fff;
+    width: 880px;
+    margin-top: 30px;
+    padding:10px 0 ;
+    height: 100px;
+    background-color: #4d3f30;
+    position: absolute;
+    bottom: 0px;
+  }
+  #update_button{
+    width: 100px;
+    position: fixed;
+    bottom: 30px;
+    right:30px;
+    transition: 0.2s;
+  }
+  #update_button:hover{
+    bottom: 30px;
+    right:30px;
+    width: 105px;
+  }
 }
 
-header{
-  height: 80px;
-  background-color:#4d3f30;
-  margin-bottom: 30px;
+.title_logo{
+  margin-top: 15px;
+}
+
+
+.be_buy{
+  color: cornflowerblue;
+}
+
+.be_sell{
+  color: crimson;
 }
 
 .index_top{
@@ -54,17 +124,28 @@ header{
 
 .index_title {
   font-size: 60px;
-  padding: 10px 0;
+  padding:20px 0 30px 0;
 }
 
 .come_message_button{
-  background-color: #ff7676;
+  font-family: "M PLUS Rounded 1c";
+  font-weight: bolder;
+  background-color: #fc7878;
   border-radius: 10px;
+  border-style: none;
+  border-bottom: #b25353 solid 5px;
+  outline: 0;
   font-size: 35px;
   color: #fff;
-  border: none;
   width: 80%;
   height: 72px;
+  transition:background-color 0.2s;
+}
+
+.come_message_button:hover{
+  background-color: #ff8f8f;
+  border-bottom-color: #b85c5c;
+  cursor: pointer;
 }
 
 .come_message{
@@ -178,13 +259,23 @@ header{
 }
 
 .go_message_button{
+  font-family: "M PLUS Rounded 1c";
+  font-weight: bolder;
   background-color: #82edaf;
   border-radius: 10px;
   font-size: 35px;
   color: #fff;
-  border: none;
+  border-style: none;
+  border-bottom: #67bf8c solid 5px;
   width: 100%;
   height: 72px;
+  transition:0.2s;
+}
+
+.go_message_button:hover{
+  background-color: #9aedbd;
+  border-bottom-color: #76d19c;
+  cursor: pointer;
 }
 
 .go_message_all{
@@ -216,13 +307,29 @@ header{
 }
 
 .go_message_delete{
+  font-family: "M PLUS Rounded 1c";
+  font-weight: bolder;
   float: right;
   font-size: 15px;
   color: #fff;
   background-color: #aca395;
   border-style: none;
+  border-bottom: #8b765d solid 3px;
   border-radius: 5px;
   padding: 3px 15px;
+  transition:background-color 0.2s;
+}
+
+.go_message_delete:hover{
+    background-color: #b6b6b6;
+    border-bottom-color: #717070;
+    cursor: pointer;
+}
+
+.go_message_delete:active{
+    border-style:none;
+    position: relative;
+    top: 3px;
 }
 
 .go_message_memo{
@@ -237,20 +344,18 @@ a {
   color: #00B7FF;
 }
 
-footer{
-  text-align: center;
-  color: #fff;
-  width: 100%;
-  margin-top: 30px;
-  padding:10px 0 ;
-  height: 100px;
-  background-color: #4d3f30;
-  position: absolute;
-  bottom: 0px;
-}
-
 footer p{
   margin-top: 7px;
+}
+
+footer a{
+  color: #fff;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+footer a:hover{
+  color: #59A679;
 }
 
 .copyright{

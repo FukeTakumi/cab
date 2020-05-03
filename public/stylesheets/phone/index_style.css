@@ -26,11 +26,17 @@ header{
     height: 80px;
     background-color:#4d3f30;
     margin-bottom: 10px;
+    text-align: center;
+}
+
+.title_logo{
+    height: 50px;
+    margin-top: 15px;
 }
 
 .index_title {
     font-size:30px;
-    padding: 10px 0;
+    padding: 10px 0 20px 0;
 }
 
 .index_top{
@@ -41,24 +47,35 @@ padding: 10px 0;
 }
 
 .come_message_button, .go_message_button{
-border-radius: 10px;
-font-size: 20px;
-color: #fff;
-border: none;
-width: 95%;
-height: 50px;
+    font-family: "M PLUS Rounded 1c";
+    font-weight: bold;
+    border-radius: 10px;
+    font-size: 20px;
+    color: #fff;
+    border-style: none;
+    width: 70%;
+    height: 50px;
 }
 
 .come_message_button{
     background-color: #ff7676;
+    border-bottom: #b25353 solid 3px;
 }
 
+.come_message_button:active{
+    background-color: #ff8f8f;
+    border-bottom-color: #b85c5c;
+}
 
 .go_message_button{
     background-color: #82edaf;
+    border-bottom: #67bf8c solid 3px;
 }
 
-
+.go_message_button:active{
+    background-color: #9aedbd;
+    border-bottom-color: #76d19c;
+}
 
 .come_message{
 margin: 0 auto;
@@ -124,42 +141,42 @@ font-size: 15px;
 }
 
 .cab_bell{
-font-size: 50px;
-position: relative;
+    font-size: 50px;
+    position: relative;
 }
 
 .want_is{
-text-align: center;
-line-height: 22px;
-background-color: #ff7676;
-color: #fff;
-font-size: 10px;
-display: inline-block;
-border-radius: 20px;
-width: 60px;
-height: 22px;
-position: relative;
-z-index: 1;
+    text-align: center;
+    line-height: 22px;
+    background-color: #ff7676;
+    color: #fff;
+    font-size: 10px;
+    display: inline-block;
+    border-radius: 20px;
+    width: 60px;
+    height: 22px;
+    position: relative;
+    z-index: 1;
 }
 
 .want{
-position: relative;
-top: -22px;
-background-color: #fff;
-font-size: 12px;
-width: 95%;
-border-radius: 0 0 20px 20px;
-padding:0 10px 10px 10px ;
+    position: relative;
+    top: -22px;
+    background-color: #fff;
+    font-size: 12px;
+    width: 95%;
+    border-radius: 0 0 20px 20px;
+    padding:0 10px 10px 10px ;
 }
 
 .want_dummy{
-position: relative;
-top: -11px;
-background-color: #fff;
-width: 95%;
-height: 22px;
-border-radius: 0 20px 0 0;
-padding:5px 10px 0 10px ;
+    position: relative;
+    top: -11px;
+    background-color: #fff;
+    width: 95%;
+    height: 22px;
+    border-radius: 0 20px 0 0;
+    padding:5px 10px 0 10px ;
 }
 
 .be_red{
@@ -170,10 +187,18 @@ color: #ff7676;
 color: #59A679;
 }
 
+.be_buy{
+    color: cornflowerblue;
+}
+
+.be_sell{
+    color: crimson;
+}
+
 .go_message_button_wrap{
 background-color: #fff8e5;
 margin: 0 auto;
-padding:20px 0 10px 0;
+padding:10px 0 10px 0;
 text-align: center;
 }
 
@@ -211,9 +236,15 @@ max-width: 80%;
     color: #fff;
     background-color: #aca395;
     border-style: none;
+    border-bottom: #8b765d solid 2px;
     border-radius: 5px;
-    padding: 5px 10px;
+    padding: 3px 8px;
     margin:0 5px 5px 0;
+}
+
+.go_message_delete:active{
+    background-color: #b6b6b6;
+    border-bottom-color: #717070;
 }
 
 .go_message_memo{
@@ -228,19 +259,29 @@ color: #00B7FF;
 }
 
 footer{
-text-align: center;
-color: #fff;
-width: 100%;
-margin-top: 30px;
-padding:5px 0 10px 0;
-height: 100px;
-background-color: #4d3f30;
-position: absolute;
-bottom: 0px;
+    font-size: 12px;
+    text-align: center;
+    color: #fff;
+    width: 100%;
+    margin-top: 30px;
+    height: 100px;
+    background-color: #4d3f30;
+    position: absolute;
+    bottom: 0px;
 }
 
 footer p{
 margin-top: 7px;
+}
+
+footer a{
+    color: #fff;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+footer a:active{
+    color: #59A679;
 }
 
 .copyright{
@@ -250,6 +291,20 @@ border-bottom: dashed 1px #fff;
 }
 
 .twitter, .github{
-width: 30px;
+width: 25px;
 margin:10px 5px 0 5px;
+}
+
+#update_button{
+    width: 70px;
+    position: fixed;
+    bottom: 30px;
+    right:10px;
+    transition: 0.2s;
+}
+
+#update_button:active{
+    bottom:25px;
+    right:5px;
+    width: 80px;
 }

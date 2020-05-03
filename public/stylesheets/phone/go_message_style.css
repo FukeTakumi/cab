@@ -6,6 +6,12 @@
 header{
     height: 80px;
     background-color:#4d3f30;
+    text-align: center;
+}
+
+.title_logo{
+    height: 50px;
+    margin-top: 15px;
 }
 
 h1:after {
@@ -34,6 +40,7 @@ body {
     background-color: #fff8e5;
     padding-bottom: 50px;
 }
+
 .main_wrapper{
     margin: 0 auto;
     width: 90%;
@@ -126,36 +133,61 @@ form{
 }
 
 .button_send, .button_cancel{
+    font-family: "M PLUS Rounded 1c";
+    font-weight: bold;
     border-style: none;
     color: #fff;
     font-size: 15px;
-    border-radius: 5px;
+    border-radius: 8px;
     margin: 10px;
     padding: 5px 10px;
 }
 
 .button_send{
     background-color: #82edaf;
+    border-bottom: #67bf8c solid 3px;
 }
+
 
 .button_cancel{
     background-color: #ccc9c0;
+    border-bottom: #8b765d solid 3px;
+}
+
+.button_cancel:active{
+    background-color: #b6b6b6;
+    border-bottom-color: #717070;
+}
+
+.button_send:active{
+    background-color: #9aedbd;
+    border-bottom-color: #76d19c;
 }
 
 footer{
-text-align: center;
-color: #fff;
-width: 100%;
-margin-top: 30px;
-padding:5px 0 10px 0;
-height: 100px;
-background-color: #4d3f30;
-position: absolute;
-bottom: 0px;
+    font-size: 12px;
+    text-align: center;
+    color: #fff;
+    width: 100%;
+    margin-top: 30px;
+    height: 100px;
+    background-color: #4d3f30;
+    position: absolute;
+    bottom: 0px;
 }
 
 footer p{
 margin-top: 7px;
+}
+
+footer a{
+    color: #fff;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+footer a:active{
+    color: #59A679;
 }
 
 .copyright{
@@ -165,7 +197,7 @@ margin-top: 7px;
 }
 
 .twitter, .github{
-    width: 30px;
+    width: 25px;
     margin:10px 5px 0 5px;
 }
 
